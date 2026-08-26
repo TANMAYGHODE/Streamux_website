@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamux.ai - Ultra-Low Latency Multi-Stream Vision AI & Telemetry Platform</title>
+  <meta name="description" content="Streamux.ai is a high-performance vision AI and telemetry engine engineered for ultra-low latency RTSP/WebRTC multi-camera object detection, precision tracking, and live HUD analytics.">
+  <meta name="keywords" content="Streamux, Vision AI, DeepStream, TensorRT, Multi-Stream RTSP, Real-Time Telemetry, Edge AI, Object Tracking">
+  <meta name="author" content="Streamux.ai Team">
+
+  <!-- OpenGraph / Social Media Meta -->
+  <meta property="og:title" content="Streamux.ai - Ultra-Low Latency Vision AI Platform">
+  <meta property="og:description" content="High-performance real-time vision AI, multi-stream RTSP processing, sub-pixel target tracking, and live telemetry analytics.">
+  <meta property="og:image" content="assets/hero-preview.png">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav-wrapper">
+        <a href="#" class="logo" id="nav-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <span>Streamux<span style="color: var(--primary-cyan);">.ai</span></span>
+          <span class="logo-badge">v2.4 LTS</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#features" id="link-features">Features</a></li>
+          <li><a href="#simulator" id="link-telemetry">Telemetry HUD</a></li>
+          <li><a href="#architecture" id="link-specs">Architecture</a></li>
+          <li><a href="#docs" id="link-docs">Docs</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-secondary" id="btn-github-nav">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="#cta" class="btn btn-primary" id="btn-deploy-nav">Deploy Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Ultra-Low Latency Multi-Stream Vision AI Platform
+      </div>
+
+      <h1>
+        Real-Time Vision AI & Edge Telemetry <br>
+        <span class="gradient-text">Engineered for Extreme Speed</span>
+      </h1>
+
+      <p class="hero-sub">
+        Streamux.ai decodes 64+ multi-camera RTSP video streams concurrently, running sub-millisecond TensorRT vision inference, sub-pixel target correlation, and live WebSocket telemetry.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#cta" class="btn btn-primary" id="btn-get-started">
+          Get Started Free
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#simulator" class="btn btn-secondary" id="btn-view-demo">
+          Live Telemetry Demo
+        </a>
+      </div>
+
+      <!-- Hero Dashboard Visual -->
+      <div class="hero-visual">
+        <!-- Floating Stats Badges -->
+        <div class="floating-stat-badge top-left">
+          <div class="stat-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-val">&lt; 1.4 ms</div>
+            <div class="stat-lbl">Inference Latency</div>
+          </div>
+        </div>
+
+        <div class="floating-stat-badge bottom-right">
+          <div class="stat-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--accent-purple);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-val">64 Active</div>
+            <div class="stat-lbl">RTSP Camera Feeds</div>
+          </div>
+        </div>
+
+        <div class="hero-img-wrapper">
+          <img src="assets/hero-preview.png" alt="Streamux.ai Vision AI Telemetry Control Center Dashboard" id="hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Strip -->
+  <section class="metrics-strip">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="number" data-target="1" data-suffix=".4ms">&lt; 1.4ms</div>
+          <div class="label">TensorRT FP16 Latency</div>
+        </div>
+        <div class="metric-item">
+          <div class="number" data-target="64" data-suffix="+">64+</div>
+          <div class="label">Concurrent 4K RTSP Feeds</div>
+        </div>
+        <div class="metric-item">
+          <div class="number" data-target="60" data-suffix=" FPS">60 FPS</div>
+          <div class="label">Real-Time HUD Render Rate</div>
+        </div>
+        <div class="metric-item">
+          <div class="number" data-target="99" data-suffix=".99%">99.99%</div>
+          <div class="label">Target Tracking Lock Accuracy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Core Platform Features</span>
+        <h2 class="section-title">Built for Mission-Critical Vision Systems</h2>
+        <p class="section-subtitle">
+          From edge devices to cloud clusters, Streamux.ai powers end-to-end multi-camera perception and real-time threat telemetry.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          </div>
+          <h3>Multi-Stream GStreamer Pipeline</h3>
+          <p>Zero-copy hardware decoding for H.264/H.265/AV1 RTSP video streams utilizing NVDEC and DeepStream plugins.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>TensorRT Acceleration</h3>
+          <p>Automated conversion and execution of YOLO11, Vision Transformers, and keypoint models in optimized FP16/INT8 precision.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Sub-Pixel Target Centroid Lock</h3>
+          <p>Adaptive Kalman filtering combined with CSRT correlation tracking for pinpoint micro-radian lead angle computation.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Sub-10ms Live HUD & WebSockets</h3>
+          <p>High-frequency telemetry broadcast delivering bounding boxes, threat classifications, and system status over lightweight WebSocket/UDP sockets.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Containerized Edge Ready</h3>
+          <p>One-command Docker launch optimized for NVIDIA Jetson Orin Nano/AGX, RTX Workstations, and Kubernetes GPU clusters.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>VLM & Vector Analytics Integration</h3>
+          <p>Automated scene descriptive notifications with Amazon Bedrock VLM integration and real-time MongoDB time-series storage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Telemetry HUD Simulator Section -->
+  <section class="section demo-section" id="simulator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Interactive Telemetry Console</span>
+        <h2 class="section-title">Live Tracking & Telemetry Feed</h2>
+        <p class="section-subtitle">
+          Experience real-time sub-pixel tracking and HUD log streaming in action below.
+        </p>
+      </div>
+
+      <div class="sim-container">
+        <div class="sim-header">
+          <div class="sim-dots">
+            <span class="sim-dot dot-red"></span>
+            <span class="sim-dot dot-yellow"></span>
+            <span class="sim-dot dot-green"></span>
+          </div>
+          <div class="sim-title">STREAMUX_ENGINE_V2 :: LIVE_TELEMETRY_HUD</div>
+          <div class="sim-status">
+            <span class="pulse-dot"></span>
+            SYSTEM ONLINE
+          </div>
+        </div>
+
+        <div class="sim-body">
+          <!-- Canvas / Tracking HUD -->
+          <div class="sim-viewport">
+            <div class="sim-radar-canvas" id="radarCanvas">
+              <!-- Animated targets injected by JS -->
+            </div>
+            <div class="sim-hud-overlay">
+              <div class="hud-item">FPS: <span id="hudFps">60.0 FPS</span></div>
+              <div class="hud-item">LATENCY: <span id="hudLatency">1.21 ms</span></div>
+              <div class="hud-item">GPU: <span>44% (NVIDIA RTX)</span></div>
+              <div class="hud-item">MODE: <span>CSRT + TRT</span></div>
+            </div>
+          </div>
+
+          <!-- Log Console Stream -->
+          <div class="sim-logs" id="logBox">
+            <div class="log-entry"><span class="time">[18:08:00]</span> <span class="tag">[STREAMUX]</span> Engine core initialized successfully.</div>
+            <div class="log-entry"><span class="time">[18:08:01]</span> <span class="tag">[STREAMUX]</span> Loading TensorRT engine: yolo11x_fp16.engine</div>
+            <div class="log-entry"><span class="time">[18:08:02]</span> <span class="tag">[STREAMUX]</span> 4 RTSP channels connected (1080p60).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specs / Architecture Section -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Specifications & Stack</span>
+        <h2 class="section-title">High-Performance Architecture</h2>
+        <p class="section-subtitle">
+          Designed with zero-overhead C++ GStreamer probes, TensorRT execution graphs, and asynchronous WebSocket telemetry dispatchers.
+        </p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-box">
+          <h4>VIDEO DECODING</h4>
+          <div class="spec-val">NVDEC / NVMM</div>
+          <p>Zero-copy memory pipelines with hardware demuxing across 64+ RTSP camera streams.</p>
+        </div>
+
+        <div class="spec-box">
+          <h4>INFERENCE ENGINE</h4>
+          <div class="spec-val">TensorRT 10.x</div>
+          <p>FP16 / INT8 quantized model execution graph with dynamic shape auto-tuning.</p>
+        </div>
+
+        <div class="spec-box">
+          <h4>TRACKING & CORRELATION</h4>
+          <div class="spec-val">CSRT + Kalman</div>
+          <p>Sub-pixel centroid offset calculation with scale-adaptive visual reference templates.</p>
+        </div>
+
+        <div class="spec-box">
+          <h4>TELEMETRY PROTOCOLS</h4>
+          <div class="spec-val">WebSocket / UDP</div>
+          <p>Low-latency telemetry streaming to modern web dashboards and lead-angle fire controllers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="container" id="cta">
+    <div class="cta-banner">
+      <h2>Host Streamux.ai Anywhere</h2>
+      <p>Deploy in minutes on your own infrastructure or run directly from Docker containers.</p>
+      <div class="hero-cta" style="margin-bottom: 0;">
+        <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-primary" id="btn-cta-github">
+          Get Started on GitHub
+        </a>
+        <a href="#features" class="btn btn-secondary" id="btn-cta-explore">
+          Explore Features
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="logo">
+          <div class="logo-icon" style="width: 28px; height: 28px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <span>Streamux.ai</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#simulator">Telemetry</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Streamux.ai. All rights reserved. Designed for Ultra-Low Latency Vision AI.</div>
+        <div style="color: var(--primary-cyan); font-family: var(--font-mono);">Hosted on GitHub Pages 🚀</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
