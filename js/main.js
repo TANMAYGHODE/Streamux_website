@@ -1,4 +1,4 @@
-// Streamux AI Website Interactive Engine
+// Streamux AI Website Interactive Engine (Firefox & Cross-Browser Tested)
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Nav Toggle
@@ -13,15 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Header Scroll Blur Effect
   const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.style.background = 'rgba(11, 17, 32, 0.95)';
-      navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
-    } else {
-      navbar.style.background = 'rgba(11, 17, 32, 0.85)';
-      navbar.style.boxShadow = 'none';
-    }
-  });
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(11, 17, 32, 0.95)';
+        navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+      } else {
+        navbar.style.background = 'rgba(11, 17, 32, 0.85)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+  }
 
   // Video Demo Filtering / Tabs
   const filterBtns = document.querySelectorAll('.video-filter-btn');
@@ -29,8 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active', 'btn-primary'));
-      filterBtns.forEach(b => b.classList.add('btn-secondary'));
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'btn-primary');
+        b.classList.add('btn-secondary');
+      });
       
       btn.classList.remove('btn-secondary');
       btn.classList.add('active', 'btn-primary');
@@ -38,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = btn.getAttribute('data-filter');
 
       videoCards.forEach(card => {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
           card.style.display = 'block';
         } else {
           card.style.display = 'none';
@@ -81,33 +86,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const animateStats = () => {
     statNumbers.forEach(stat => {
-      const target = +stat.getAttribute('data-target');
-      const count = +stat.innerText.replace('+', '').replace('%', '').replace('x', '');
-      const speed = target / 50;
+      const target = parseInt(stat.getAttribute('data-target') || '0', 10);
+      const currentText = stat.textContent || stat.innerText || '0';
+      const count = parseInt(currentText.replace(/[^0-9]/g, '') || '0', 10);
+      const step = Math.max(1, Math.ceil(target / 40));
 
       if (count < target) {
-        const nextVal = Math.ceil(count + speed);
+        const nextVal = Math.min(target, count + step);
         const suffix = stat.getAttribute('data-suffix') || '';
-        stat.innerText = nextVal + suffix;
+        stat.textContent = nextVal + suffix;
         setTimeout(animateStats, 30);
       } else {
         const suffix = stat.getAttribute('data-suffix') || '';
-        stat.innerText = target + suffix;
+        stat.textContent = target + suffix;
       }
     });
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        animated = true;
-        animateStats();
-      }
-    });
-  }, { threshold: 0.5 });
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          animateStats();
+        }
+      });
+    }, { threshold: 0.3 });
 
-  const statsBanner = document.querySelector('.stats-banner');
-  if (statsBanner) {
-    observer.observe(statsBanner);
+    const statsBanner = document.querySelector('.stats-banner');
+    if (statsBanner) {
+      observer.observe(statsBanner);
+    }
+  } else {
+    // Fallback for older browsers
+    animateStats();
   }
 });
