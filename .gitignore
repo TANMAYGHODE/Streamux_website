@@ -1,0 +1,14 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Temp & build files
+*.tmp
+*.log
+*.bak
+node_modules/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
