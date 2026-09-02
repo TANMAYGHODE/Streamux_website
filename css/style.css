@@ -611,13 +611,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Navigation Toggle Button */
 .mobile-toggle {
-  display: none;
-  background: none;
+  display: none !important;
+  background: transparent;
   border: none;
   color: var(--text-main);
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: var(--radius-sm);
   transition: var(--transition);
 }
@@ -626,13 +626,17 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--brand-orange);
 }
 
-/* Subpage Hero Header */
+/* Subpage Hero Header (Firefox & Cross-Browser Safe Padding) */
 .subpage-hero {
-  padding-top: calc(var(--nav-height) + 40px);
+  padding-top: 130px; /* Fallback for browsers without calc/var support */
+  padding-top: calc(var(--nav-height) + 50px);
   padding-bottom: 50px;
   background: radial-gradient(circle at 50% 10%, rgba(37, 99, 235, 0.12) 0%, transparent 65%);
   border-bottom: 1px solid var(--border-light);
   text-align: center;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .subpage-hero .badge {
@@ -1001,7 +1005,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .mobile-toggle {
-    display: block;
+    display: inline-flex !important;
   }
 
   .nav-menu {
