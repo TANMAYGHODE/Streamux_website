@@ -6,7 +6,7 @@
   <title>Streamux AI | The New Era of Empowerment | AI-Powered Video Analytics Platform</title>
   <meta name="description" content="Streamux AI delivers real-time AI-powered video analytics for security, safety, and operational intelligence across factories, campuses, stadiums, warehouses, and temple complexes.">
   
-  <!-- Preconnect Google Fonts for Firefox & Cross-Browser Speed -->
+  <!-- Preconnect Google Fonts for Speed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -24,47 +24,58 @@
   <!-- Navigation Bar -->
   <nav class="navbar" id="navbar">
     <div class="navbar-container">
-      <a href="#" class="brand-logo">
+      <a href="index.html" class="brand-logo">
         <img src="assets/logo/Streamux_The_New_Era_Of_Empowerment.png" alt="Streamux AI - The New Era of Empowerment">
       </a>
       
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#solutions" class="nav-link">Solutions</a></li>
-        <li><a href="#capabilities" class="nav-link">AI Capabilities</a></li>
-        <li><a href="#demos" class="nav-link">Live Demos</a></li>
-        <li><a href="#brochures" class="nav-link">Brochures</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+        <li><a href="demos.html" class="nav-link">Live Demos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary">
+        <a href="contact.html" class="btn btn-primary">
           <i class="fas fa-bolt"></i> Request Demo
         </a>
       </div>
+
+      <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="section">
+    <div class="section" style="padding-top: 20px; padding-bottom: 40px;">
       <div class="hero-grid">
         <div class="hero-content">
-          <div class="badge badge-orange">
-            <i class="fas fa-eye"></i> Next-Gen Computer Vision Platform
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
+            <div class="badge badge-orange" style="margin-bottom: 0;">
+              <i class="fas fa-eye"></i> Next-Gen Computer Vision Platform
+            </div>
+            <div class="nvidia-inception-pill" title="Streamux is a proud member of the NVIDIA Inception Program">
+              <img src="assets/logo/nvidia-inception.svg" alt="NVIDIA Inception Program Member">
+            </div>
           </div>
           <h1>
             Turn Any CCTV Feed Into <span class="gradient-text">Real-Time Intelligence</span>
           </h1>
           <p>
-            Streamux transforms existing camera infrastructure into proactive AI powerhouses. Detect hazards, track entry & exit, prevent intrusions, and automate security across campuses, factories, warehouses, and stadiums instantly.
+            Streamux transforms existing camera infrastructure into proactive AI powerhouses. Detect hazards, track entry & exit, prevent intrusions, and automate safety across campuses, factories, warehouses, and stadiums instantly.
           </p>
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">
-              <i class="fas fa-rocket"></i> Get Started Today
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fas fa-rocket"></i> Request A Live Demo
             </a>
-            <a href="assets/Streamux__Pitch_Deck.pdf" target="_blank" class="btn btn-secondary">
-              <i class="fas fa-file-pdf"></i> Download Pitch Deck
+            <a href="solutions.html" class="btn btn-secondary">
+              <i class="fas fa-cubes"></i> Explore Solutions
+            </a>
+            <a href="demos.html" class="btn btn-secondary">
+              <i class="fas fa-play-circle"></i> Watch Demos
             </a>
           </div>
         </div>
@@ -93,13 +104,31 @@
       </div>
       <div class="stat-item">
         <div class="stat-number" data-target="100" data-suffix="%">0%</div>
-        <div class="stat-label">CCTV Compatibility</div>
+        <div class="stat-label">CCTV & RTSP Compatibility</div>
       </div>
     </div>
   </div>
 
-  <!-- Enterprise Solutions Section -->
-  <section class="section" id="solutions">
+  <!-- NVIDIA Inception Banner Highlight -->
+  <div class="section" style="padding-top: 0; padding-bottom: 40px;">
+    <div class="nvidia-banner">
+      <div class="nvidia-banner-text">
+        <span class="nvidia-tag"><i class="fas fa-microchip"></i> Global Ecosystem Recognition</span>
+        <h3>Streamux AI is a Member of the NVIDIA Inception Program</h3>
+        <p>
+          Backed by NVIDIA's premier acceleration program for deep-tech pioneers, Streamux leverages NVIDIA DeepStream SDK, TensorRT acceleration, and Jetson edge architectures to run state-of-the-art vision models at ultra-low latency with zero cloud egress.
+        </p>
+      </div>
+      <div>
+        <a href="about.html#nvidia" class="btn btn-secondary" style="border-color: rgba(118,185,0,0.5); color: #fff; white-space: nowrap;">
+          <i class="fas fa-arrow-right"></i> Learn About Our Tech
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enterprise Solutions Preview Section -->
+  <section class="section" id="solutions-preview">
     <div class="section-header">
       <div class="badge"><i class="fas fa-cubes"></i> Industry-Tailored AI Platforms</div>
       <h2 class="section-title">Turnkey Solutions For Every Sector</h2>
@@ -119,11 +148,11 @@
           <li class="feature-item"><i class="fas fa-check-circle"></i> PPE & Helmet Compliance Monitoring</li>
           <li class="feature-item"><i class="fas fa-check-circle"></i> Fire & Smoke Early Warning Detection</li>
           <li class="feature-item"><i class="fas fa-check-circle"></i> Restricted Zone Intrusion Alerts</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Waste & Hygiene Monitoring</li>
+          <li class="feature-item"><i class="fas fa-check-circle"></i> Waste & Hazard Alerts</li>
         </ul>
-        <div style="margin-top: 20px;">
-          <a href="assets/Product_Brouchers/AI_Factory_Brochure.jpeg" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-            <i class="fas fa-image"></i> View Factory Brochure
+        <div style="margin-top: 24px;">
+          <a href="solutions.html#factory" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Explore Factory Suite <i class="fas fa-arrow-right"></i>
           </a>
         </div>
       </div>
@@ -142,72 +171,9 @@
           <li class="feature-item"><i class="fas fa-check-circle"></i> Fight & Student Conflict Detection</li>
           <li class="feature-item"><i class="fas fa-check-circle"></i> Real-time Incident Notifications</li>
         </ul>
-        <div style="margin-top: 20px;">
-          <a href="assets/Product_Brouchers/AI_Campus_Brochure.png" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-            <i class="fas fa-image"></i> View Campus Brochure
-          </a>
-        </div>
-      </div>
-
-      <!-- AI Stadium -->
-      <div class="card">
-        <div class="card-img-wrapper">
-          <img src="assets/images/solution-stadium.png" alt="Streamux AI Stadium">
-        </div>
-        <div class="card-icon"><i class="fas fa-trophy"></i></div>
-        <h3 class="card-title">Streamux AI Stadium</h3>
-        <p class="card-desc">Safer, smarter event management for high-capacity public arenas and venues.</p>
-        <ul class="feature-list">
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Gate Headcounts & Turnstile Tracking</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Stampede & Panic Crowd Alerts</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Zone Density Heatmaps</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> ANPR Parking Access Control</li>
-        </ul>
-        <div style="margin-top: 20px;">
-          <a href="assets/Product_Brouchers/AI_Stadium_Brochure.png" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-            <i class="fas fa-image"></i> View Stadium Brochure
-          </a>
-        </div>
-      </div>
-
-      <!-- AI Warehouse -->
-      <div class="card">
-        <div class="card-img-wrapper">
-          <img src="assets/images/solution-warehouse.png" alt="Streamux AI Warehouse">
-        </div>
-        <div class="card-icon"><i class="fas fa-warehouse"></i></div>
-        <h3 class="card-title">Streamux AI Warehouse</h3>
-        <p class="card-desc">Optimize supply chain operations, gate turnaround time, and dock safety.</p>
-        <ul class="feature-list">
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Vehicle Loading & Unloading Analytics</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Automated ANPR Truck Entry Logging</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Loitering & Unattended Package Alerts</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Multi-site Warehouse Dashboard</li>
-        </ul>
-        <div style="margin-top: 20px;">
-          <a href="assets/Product_Brouchers/AI_Warehouse_Brochure.png" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-            <i class="fas fa-image"></i> View Warehouse Brochure
-          </a>
-        </div>
-      </div>
-
-      <!-- AI Netra (Temples) -->
-      <div class="card">
-        <div class="card-img-wrapper">
-          <img src="assets/images/solution-temple.png" alt="Streamux AI Netra">
-        </div>
-        <div class="card-icon"><i class="fas fa-place-of-worship"></i></div>
-        <h3 class="card-title">Streamux AI Netra</h3>
-        <p class="card-desc">Intelligent security and queue management platform for major places of worship.</p>
-        <ul class="feature-list">
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Accurate Bidirectional Devotee Counting</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Queue Token & Wait-Time Optimization</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Real-time Overcrowding Warning</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Lost & Found Coordination Support</li>
-        </ul>
-        <div style="margin-top: 20px;">
-          <a href="assets/Product_Brouchers/AI_Netra_Brochure.jpeg" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-            <i class="fas fa-image"></i> View Netra Brochure
+        <div style="margin-top: 24px;">
+          <a href="solutions.html#campus" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Explore Campus Suite <i class="fas fa-arrow-right"></i>
           </a>
         </div>
       </div>
@@ -224,307 +190,105 @@
           <li class="feature-item"><i class="fas fa-check-circle"></i> Ultra-Fast Automatic License Plate Recognition</li>
           <li class="feature-item"><i class="fas fa-check-circle"></i> Real-time IN / OUT / TOTAL KPI Analytics</li>
           <li class="feature-item"><i class="fas fa-check-circle"></i> One-click CSV Audit Logs Export</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> Affordable Enterprise Annual Subscription</li>
+          <li class="feature-item"><i class="fas fa-check-circle"></i> Cost-Effective ₹1,000/stream model</li>
         </ul>
-        <div style="margin-top: 20px;">
-          <a href="assets/Product_Brouchers/Smart_Gate_Management.jpeg" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-            <i class="fas fa-image"></i> View Gate Brochure
+        <div style="margin-top: 24px;">
+          <a href="solutions.html#gate" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Explore Smart Gate Suite <i class="fas fa-arrow-right"></i>
           </a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Core AI Capabilities Section -->
-  <section class="section" id="capabilities">
-    <div class="section-header">
-      <div class="badge badge-orange"><i class="fas fa-brain"></i> Advanced AI Modules</div>
-      <h2 class="section-title">Built On State-Of-The-Art Vision Models</h2>
-      <p class="section-subtitle">Plug-and-play modular analytics compatible with any RTSP camera stream.</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-hard-hat"></i></div>
-        <h3 class="card-title">PPE & Safety Detection</h3>
-        <p class="card-desc">Detects hard hats, safety jackets, gloves, and protective gear in real-time to enforce OSHA safety compliance.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-id-card"></i></div>
-        <h3 class="card-title">Face Recognition & ANPR</h3>
-        <p class="card-desc">High-precision visitor recognition and automatic vehicle license plate reading with instant blacklist matching.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-hand-fist"></i></div>
-        <h3 class="card-title">Fight & Aggression Alerts</h3>
-        <p class="card-desc">Pose estimation models detect sudden violent movements, physical altercations, and distress in crowds.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-car-side"></i></div>
-        <h3 class="card-title">Vehicle & Object Counting</h3>
-        <p class="card-desc">Bi-directional vehicle tracking, speed estimation, and traffic flow optimization across multi-lane roads.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-shield"></i></div>
-        <h3 class="card-title">Perimeter Watch 24/7</h3>
-        <p class="card-desc">Draw custom virtual tripwires and boundary polygons to catch fence scaling, loitering, and night trespassing.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-fire"></i></div>
-        <h3 class="card-title">Fire & Smoke Early Alert</h3>
-        <p class="card-desc">Visual flame and smoke detection that alerts security teams minutes before traditional thermal sensors activate.</p>
-      </div>
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="solutions.html" class="btn btn-primary">
+        <i class="fas fa-cubes"></i> View All 6 Industry Solutions & Brochures
+      </a>
     </div>
   </section>
 
-  <!-- Live Video Demos Section -->
-  <section class="section" id="demos">
+  <!-- Featured Live Video Demos with Posters -->
+  <section class="section" id="featured-demos" style="background: rgba(11, 17, 32, 0.4);">
     <div class="section-header">
-      <div class="badge"><i class="fas fa-play-circle"></i> See AI In Action</div>
-      <h2 class="section-title">Live Video Analytics Demonstrations</h2>
-      <p class="section-subtitle">Real video feeds processed by Streamux AI models in real time.</p>
-
-      <div style="display: flex; gap: 12px; justify-content: center; margin-top: 24px; flex-wrap: wrap;">
-        <button class="btn btn-primary video-filter-btn active" data-filter="all">All Demos</button>
-        <button class="btn btn-secondary video-filter-btn" data-filter="safety">Safety & PPE</button>
-        <button class="btn btn-secondary video-filter-btn" data-filter="security">Security & Access</button>
-        <button class="btn btn-secondary video-filter-btn" data-filter="analytics">Analytics & Counting</button>
-      </div>
+      <div class="badge badge-orange"><i class="fas fa-play-circle"></i> Real-Time Execution</div>
+      <h2 class="section-title">See Streamux AI In Action</h2>
+      <p class="section-subtitle">Real video feeds processed by Streamux AI computer vision models with real-time inference overlays.</p>
     </div>
 
     <div class="video-grid">
-      <!-- Demo 1 -->
-      <div class="video-card" data-category="safety">
+      <!-- Demo 1: PPE -->
+      <div class="video-card">
         <div class="video-player-container">
-          <video controls preload="metadata" playsinline muted>
+          <video controls preload="metadata" playsinline muted poster="assets/images/thumbnails/thumb_ppe.jpg">
             <source src="assets/Demo_Videos/PPE_DETECTION_DEMO.mp4" type="video/mp4">
-            Your browser does not support HTML5 video streaming.
+            Your browser does not support HTML5 video.
           </video>
         </div>
         <div class="video-info">
           <span class="video-tag">Industrial Safety</span>
           <h4 class="video-title">PPE Compliance & Hazard Detection</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 6px;">
+            Real-time multi-person detection of helmets, reflective safety vests, and protective gear.
+          </p>
         </div>
       </div>
 
-      <!-- Demo 2 -->
-      <div class="video-card" data-category="security">
+      <!-- Demo 2: Fight Detection -->
+      <div class="video-card">
         <div class="video-player-container">
-          <video controls preload="metadata" playsinline muted>
-            <source src="assets/Demo_Videos/Face_Recognition_demo.mp4" type="video/mp4">
-            Your browser does not support HTML5 video streaming.
-          </video>
-        </div>
-        <div class="video-info">
-          <span class="video-tag">Access Control</span>
-          <h4 class="video-title">Facial Recognition & Attendance</h4>
-        </div>
-      </div>
-
-      <!-- Demo 3 -->
-      <div class="video-card" data-category="security">
-        <div class="video-player-container">
-          <video controls preload="metadata" playsinline muted>
+          <video controls preload="metadata" playsinline muted poster="assets/images/thumbnails/thumb_fight.jpg">
             <source src="assets/Demo_Videos/fight_detection_demo.mp4" type="video/mp4">
-            Your browser does not support HTML5 video streaming.
+            Your browser does not support HTML5 video.
           </video>
         </div>
         <div class="video-info">
-          <span class="video-tag">Surveillance</span>
+          <span class="video-tag">Public Safety</span>
           <h4 class="video-title">Fight & Conflict Detection Engine</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 6px;">
+            Pose estimation models detecting violent physical altercations and instant alert triggering.
+          </p>
         </div>
       </div>
 
-      <!-- Demo 4 -->
-      <div class="video-card" data-category="analytics">
+      <!-- Demo 3: Gate Management -->
+      <div class="video-card">
         <div class="video-player-container">
-          <video controls preload="metadata" playsinline muted>
+          <video controls preload="metadata" playsinline muted poster="assets/images/thumbnails/thumb_gate.jpg">
             <source src="assets/Demo_Videos/Smart_gate_management.mp4" type="video/mp4">
-            Your browser does not support HTML5 video streaming.
+            Your browser does not support HTML5 video.
           </video>
         </div>
         <div class="video-info">
-          <span class="video-tag">Smart Gate</span>
-          <h4 class="video-title">Automated Gate Management & ANPR</h4>
+          <span class="video-tag">Smart Access</span>
+          <h4 class="video-title">Smart Gate & ANPR Analytics</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 6px;">
+            License plate extraction, vehicle classification, and gate entry/exit tracking.
+          </p>
         </div>
       </div>
+    </div>
 
-      <!-- Demo 5 -->
-      <div class="video-card" data-category="analytics">
-        <div class="video-player-container">
-          <video controls preload="metadata" playsinline muted>
-            <source src="assets/Demo_Videos/Vehicle_counting.mp4" type="video/mp4">
-            Your browser does not support HTML5 video streaming.
-          </video>
-        </div>
-        <div class="video-info">
-          <span class="video-tag">Traffic Intelligence</span>
-          <h4 class="video-title">Vehicle Counting & Speed Tracking</h4>
-        </div>
-      </div>
-
-      <!-- Demo 6 -->
-      <div class="video-card" data-category="safety">
-        <div class="video-player-container">
-          <video controls preload="metadata" playsinline muted>
-            <source src="assets/Demo_Videos/AI_Building_Ad.mp4" type="video/mp4">
-            Your browser does not support HTML5 video streaming.
-          </video>
-        </div>
-        <div class="video-info">
-          <span class="video-tag">Smart Infrastructure</span>
-          <h4 class="video-title">AI Building & Facility Intelligence</h4>
-        </div>
-      </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="demos.html" class="btn btn-secondary">
+        <i class="fas fa-film"></i> View All 6 Live AI Demonstrations
+      </a>
     </div>
   </section>
 
-  <!-- Product Brochures Section -->
-  <section class="section" id="brochures">
-    <div class="section-header">
-      <div class="badge badge-orange"><i class="fas fa-folder-open"></i> Resources</div>
-      <h2 class="section-title">Download Product Brochures</h2>
-      <p class="section-subtitle">Get detailed feature sets, architectures, and deployment options for your enterprise.</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card" style="text-align: center;">
-        <div class="card-icon" style="margin: 0 auto 20px;"><i class="fas fa-file-pdf"></i></div>
-        <h3 class="card-title">Streamux Pitch Deck</h3>
-        <p class="card-desc">Complete overview of Streamux AI vision capabilities, market impact, and technology stack.</p>
-        <a href="assets/Streamux__Pitch_Deck.pdf" target="_blank" class="btn btn-primary" style="width: 100%;">
-          <i class="fas fa-download"></i> Download Pitch Deck (PDF)
+  <!-- CTA Banner -->
+  <section class="section">
+    <div style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(249, 115, 22, 0.2) 100%); border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 60px 40px; text-align: center;">
+      <h2 style="font-size: 2.4rem; margin-bottom: 16px;">Ready to Empower Your Cameras with AI?</h2>
+      <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 680px; margin: 0 auto 30px;">
+        Connect your existing RTSP CCTV cameras to Streamux in minutes. Schedule a live pilot demonstration on your actual video feeds today.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Request Custom Demo
         </a>
-      </div>
-
-      <div class="card" style="text-align: center;">
-        <div class="card-icon" style="margin: 0 auto 20px;"><i class="fas fa-file-image"></i></div>
-        <h3 class="card-title">AI Factory Brochure</h3>
-        <p class="card-desc">Detailed specifications for PPE tracking, fire detection, and factory safety suites.</p>
-        <a href="assets/Product_Brouchers/AI_Factory_Brochure.jpeg" target="_blank" class="btn btn-secondary" style="width: 100%;">
-          <i class="fas fa-external-link-alt"></i> View Factory Brochure
+        <a href="about.html" class="btn btn-secondary">
+          <i class="fas fa-info-circle"></i> About Our Company
         </a>
-      </div>
-
-      <div class="card" style="text-align: center;">
-        <div class="card-icon" style="margin: 0 auto 20px;"><i class="fas fa-file-image"></i></div>
-        <h3 class="card-title">AI Campus Brochure</h3>
-        <p class="card-desc">Comprehensive guide to perimeter watch, student conflict alerts, and crowd management.</p>
-        <a href="assets/Product_Brouchers/AI_Campus_Brochure.png" target="_blank" class="btn btn-secondary" style="width: 100%;">
-          <i class="fas fa-external-link-alt"></i> View Campus Brochure
-        </a>
-      </div>
-
-      <div class="card" style="text-align: center;">
-        <div class="card-icon" style="margin: 0 auto 20px;"><i class="fas fa-file-image"></i></div>
-        <h3 class="card-title">AI Stadium Brochure</h3>
-        <p class="card-desc">Headcount tracking, stampede alerts, and venue safety solutions breakdown.</p>
-        <a href="assets/Product_Brouchers/AI_Stadium_Brochure.png" target="_blank" class="btn btn-secondary" style="width: 100%;">
-          <i class="fas fa-external-link-alt"></i> View Stadium Brochure
-        </a>
-      </div>
-
-      <div class="card" style="text-align: center;">
-        <div class="card-icon" style="margin: 0 auto 20px;"><i class="fas fa-file-image"></i></div>
-        <h3 class="card-title">AI Warehouse Brochure</h3>
-        <p class="card-desc">Loading dock analytics, truck ANPR tracking, and loitering detection guides.</p>
-        <a href="assets/Product_Brouchers/AI_Warehouse_Brochure.png" target="_blank" class="btn btn-secondary" style="width: 100%;">
-          <i class="fas fa-external-link-alt"></i> View Warehouse Brochure
-        </a>
-      </div>
-
-      <div class="card" style="text-align: center;">
-        <div class="card-icon" style="margin: 0 auto 20px;"><i class="fas fa-file-image"></i></div>
-        <h3 class="card-title">Streamux AI Netra</h3>
-        <p class="card-desc">Intelligent crowd and devotee management platform for temples and spiritual hubs.</p>
-        <a href="assets/Product_Brouchers/AI_Netra_Brochure.jpeg" target="_blank" class="btn btn-secondary" style="width: 100%;">
-          <i class="fas fa-external-link-alt"></i> View Netra Brochure
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Request Demo Section -->
-  <section class="section" id="contact">
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="badge badge-orange"><i class="fas fa-paper-plane"></i> Get In Touch</div>
-        <h3>Ready to Empower Your Cameras with AI?</h3>
-        <p style="color: var(--text-muted);">
-          Contact our team to schedule a custom live demonstration on your existing CCTV streams or request a pilot deployment.
-        </p>
-
-        <div class="contact-details">
-          <div class="detail-item">
-            <div class="detail-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">Email Us</div>
-              <a href="mailto:contact@streamux.ai" style="color: var(--text-main); font-weight: 600; text-decoration: none;">contact@streamux.ai</a>
-            </div>
-          </div>
-
-          <div class="detail-item">
-            <div class="detail-icon"><i class="fas fa-phone-alt"></i></div>
-            <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">Call Sales / Support</div>
-              <a href="tel:+919511874029" style="color: var(--text-main); font-weight: 600; text-decoration: none;">+91 9511874029</a>
-            </div>
-          </div>
-
-          <div class="detail-item">
-            <div class="detail-icon"><i class="fas fa-globe"></i></div>
-            <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">Official Website</div>
-              <span style="color: var(--text-main); font-weight: 600;">www.streamux.ai</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form-wrapper">
-        <div id="formSuccess" style="display: none; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.4); color: #4ADE80; padding: 16px; border-radius: var(--radius-md); margin-bottom: 20px; text-align: center;">
-          <i class="fas fa-check-circle"></i> Thank you! Your request has been sent successfully. We will get back to you shortly.
-        </div>
-
-        <form id="contactForm">
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-input" placeholder="e.g. John Doe" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Work Email</label>
-            <input type="email" class="form-input" placeholder="john@company.com" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Solution Interest</label>
-            <select class="form-select" required>
-              <option value="">Select Solution Sector</option>
-              <option value="factory">Streamux AI Factory</option>
-              <option value="campus">Streamux AI Campus</option>
-              <option value="stadium">Streamux AI Stadium</option>
-              <option value="warehouse">Streamux AI Warehouse</option>
-              <option value="netra">Streamux AI Netra (Temples)</option>
-              <option value="gate">Smart Gate Management</option>
-              <option value="other">Custom AI Analytics</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Message / Deployment Requirements</label>
-            <textarea class="form-textarea" placeholder="Tell us about your camera setup and security goals..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            <i class="fas fa-paper-plane"></i> Submit Request
-          </button>
-        </form>
       </div>
     </div>
   </section>
@@ -533,58 +297,73 @@
   <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="brand-logo">
+        <a href="index.html" class="brand-logo">
           <img src="assets/logo/Streamux_The_New_Era_Of_Empowerment.png" alt="Streamux AI">
         </a>
         <p>
           Streamux AI is pioneering real-time computer vision analytics for modern infrastructure, offering end-to-end safety, compliance, and automated video surveillance.
         </p>
+        <div style="margin-top: 20px;">
+          <div class="nvidia-inception-pill">
+            <img src="assets/logo/nvidia-inception.svg" alt="NVIDIA Inception Program Member">
+          </div>
+        </div>
       </div>
 
       <div>
         <h4 class="footer-title">Solutions</h4>
         <ul class="footer-links">
-          <li><a href="#solutions" class="footer-link">AI Factory</a></li>
-          <li><a href="#solutions" class="footer-link">AI Campus</a></li>
-          <li><a href="#solutions" class="footer-link">AI Stadium</a></li>
-          <li><a href="#solutions" class="footer-link">AI Warehouse</a></li>
-          <li><a href="#solutions" class="footer-link">AI Netra</a></li>
-          <li><a href="#solutions" class="footer-link">Smart Gate</a></li>
+          <li><a href="solutions.html#factory" class="footer-link">AI Factory</a></li>
+          <li><a href="solutions.html#campus" class="footer-link">AI Campus</a></li>
+          <li><a href="solutions.html#stadium" class="footer-link">AI Stadium</a></li>
+          <li><a href="solutions.html#warehouse" class="footer-link">AI Warehouse</a></li>
+          <li><a href="solutions.html#netra" class="footer-link">AI Netra (Temples)</a></li>
+          <li><a href="solutions.html#gate" class="footer-link">Smart Gate Management</a></li>
         </ul>
       </div>
 
       <div>
         <h4 class="footer-title">Company</h4>
         <ul class="footer-links">
-          <li><a href="#home" class="footer-link">About Us</a></li>
-          <li><a href="#capabilities" class="footer-link">AI Features</a></li>
-          <li><a href="#demos" class="footer-link">Live Demos</a></li>
-          <li><a href="#brochures" class="footer-link">Brochures</a></li>
-          <li><a href="#contact" class="footer-link">Contact Sales</a></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="solutions.html" class="footer-link">Solutions & Brochures</a></li>
+          <li><a href="demos.html" class="footer-link">Live Demos</a></li>
+          <li><a href="contact.html" class="footer-link">Contact & Pilot Request</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="footer-title">Contact Us</h4>
-        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">
-          <i class="fas fa-envelope" style="color: var(--brand-orange); margin-right: 8px;"></i> contact@streamux.ai
+        <h4 class="footer-title">Headquarters & Contact</h4>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px; line-height: 1.6;">
+          <i class="fas fa-map-marker-alt" style="color: var(--brand-orange); margin-right: 8px;"></i>
+          317, NarayanNarayani, Laxmi Nagar, Near Dikshabhoomi, Nagpur 440022
         </p>
-        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px;">
-          <i class="fas fa-phone" style="color: var(--brand-orange); margin-right: 8px;"></i> +91 9511874029
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 10px;">
+          <i class="fas fa-envelope" style="color: var(--brand-orange); margin-right: 8px;"></i> 
+          <a href="mailto:contact@streamux.ai" style="color: var(--text-main); text-decoration: none;">contact@streamux.ai</a>
         </p>
-        <div style="display: flex; gap: 12px;">
-          <a href="#" class="btn btn-secondary btn-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="btn btn-secondary btn-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="btn btn-secondary btn-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 18px;">
+          <i class="fas fa-phone" style="color: var(--brand-orange); margin-right: 8px;"></i> 
+          <a href="tel:+919511874029" style="color: var(--text-main); text-decoration: none;">+91 9511874029</a>
+        </p>
+        
+        <div class="social-links-row">
+          <a href="https://www.linkedin.com/company/streamux/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="social-link-btn linkedin" aria-label="Streamux LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/streamux.ai/" target="_blank" rel="noopener noreferrer" class="social-link-btn instagram" aria-label="Streamux Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div>&copy; 2026 Streamux. All rights reserved. Built for GitHub Pages.</div>
+      <div>&copy; 2026 Streamux. All rights reserved. Registered Office: Nagpur, India.</div>
       <div>
-        <a href="#" class="footer-link" style="margin-right: 20px;">Privacy Policy</a>
-        <a href="#" class="footer-link">Terms of Service</a>
+        <a href="contact.html" class="footer-link" style="margin-right: 20px;">Contact Sales</a>
+        <a href="solutions.html" class="footer-link">Brochures</a>
       </div>
     </div>
   </footer>
