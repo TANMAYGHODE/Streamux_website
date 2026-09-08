@@ -1,8 +1,58 @@
 // Streamux AI Website Interactive Engine
-// Cross-browser tested, production-grade interactivity
+// Cross-browser tested, production-grade interactivity & Theme Manager
+
+// Initialize theme as early as possible to prevent flash
+(function() {
+  const savedTheme = localStorage.getItem('streamux-theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Navigation Toggle
+  // 1. Theme Manager (Day-Light / Dark Night Mode)
+  const themeToggles = document.querySelectorAll('#themeToggle, .theme-toggle-btn');
+
+  function updateThemeUI(theme) {
+    themeToggles.forEach(toggle => {
+      const icon = toggle.querySelector('i');
+      if (theme === 'dark') {
+        if (icon) {
+          icon.className = 'fas fa-sun';
+          icon.style.color = '#F59E0B';
+        }
+        toggle.setAttribute('aria-label', 'Switch to Day-Light Mode');
+        toggle.setAttribute('title', 'Switch to Day-Light Mode');
+      } else {
+        if (icon) {
+          icon.className = 'fas fa-moon';
+          icon.style.color = '#475569';
+        }
+        toggle.setAttribute('aria-label', 'Switch to Dark Mode');
+        toggle.setAttribute('title', 'Switch to Dark Mode');
+      }
+    });
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('streamux-theme', theme);
+    updateThemeUI(theme);
+  }
+
+  // Initial UI sync
+  const currentTheme = localStorage.getItem('streamux-theme') || 'light';
+  applyTheme(currentTheme);
+
+  // Toggle button event listener
+  themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+    });
+  });
+
+  // 2. Mobile Navigation Toggle
   const mobileNavToggle = document.getElementById('mobileNavToggle');
   const navMenu = document.getElementById('navMenu');
 
@@ -46,21 +96,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Header Scroll Blur & Shadow Effect
+  // 3. Header Scroll Blur & Shadow Effect (CSS class-based)
   const navbar = document.querySelector('.navbar');
   if (navbar) {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (window.scrollY > 30) {
-        navbar.style.background = 'rgba(11, 17, 32, 0.96)';
-        navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+        navbar.classList.add('scrolled');
       } else {
-        navbar.style.background = 'rgba(11, 17, 32, 0.88)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
       }
-    });
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
   }
 
-  // 3. Video Demo Filtering / Category Tabs
+  // 4. Video Demo Filtering / Category Tabs
   const filterBtns = document.querySelectorAll('.video-filter-btn');
   const videoCards = document.querySelectorAll('.video-card');
 
@@ -89,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Contact Form Submission Handling (FormSubmit / Web3Forms / AJAX)
+  // 5. Contact Form Submission Handling (FormSubmit / Web3Forms / AJAX)
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
   const formError = document.getElementById('formError');
@@ -149,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mailtoLink = `mailto:contact@streamux.ai?subject=${encodeURIComponent('Streamux AI Demo Request: ' + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSolution: ${solution}\nRequirements: ${requirements}`)}`;
         
         if (formSuccess) {
-          formSuccess.innerHTML = `<i class="fas fa-check-circle"></i> Request prepared! If your email client does not open automatically, <a href="${mailtoLink}" style="color: #fff; text-decoration: underline; font-weight: bold; margin-left: 6px;">click here to email contact@streamux.ai</a>.`;
+          formSuccess.innerHTML = `<i class="fas fa-check-circle"></i> Request prepared! If your email client does not open automatically, <a href="${mailtoLink}" style="color: var(--primary-blue); text-decoration: underline; font-weight: bold; margin-left: 6px;">click here to email contact@streamux.ai</a>.`;
           formSuccess.style.display = 'flex';
         }
         window.location.href = mailtoLink;
@@ -160,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Counter Animation for Stats
+  // 6. Counter Animation for Stats
   const statNumbers = document.querySelectorAll('.stat-number');
   let animated = false;
 

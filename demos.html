@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Video Analytics Demos | Streamux AI</title>
-  <meta name="description" content="Watch Streamux AI in action: PPE compliance, face recognition, fight and aggression alerts, smart gate ANPR, and vehicle tracking on real camera feeds.">
-  
+  <meta name="description"
+    content="Watch Streamux AI in action: PPE compliance, face recognition, fight and aggression alerts, smart gate ANPR, and vehicle tracking on real camera feeds.">
+
+  <!-- Preload Theme Script to Prevent Flash -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('streamux-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Preconnect Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
   <!-- FontAwesome 6 Free -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link rel="stylesheet" href="css/style.css?v=2.5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css?v=2.6">
   <link rel="icon" type="image/jpeg" href="assets/logo/Streamux_Logo.jpg">
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -25,7 +40,7 @@
       <a href="index.html" class="brand-logo">
         <img src="assets/logo/Streamux_The_New_Era_Of_Empowerment.png" alt="Streamux AI">
       </a>
-      
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="solutions.html" class="nav-link">Solutions</a></li>
@@ -35,6 +50,9 @@
       </ul>
 
       <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
         <a href="contact.html" class="btn btn-primary">
           <i class="fas fa-bolt"></i> Request Demo
         </a>
@@ -51,7 +69,8 @@
     <div class="badge badge-orange"><i class="fas fa-play-circle"></i> Video Intelligence Showcase</div>
     <h1>Live Video <span class="gradient-text">Analytics Demos</span></h1>
     <p>
-      Explore real-world CCTV feeds processed by Streamux AI models. Optimized for high accuracy and ultra-low inference latency on NVIDIA edge and cloud pipelines.
+      Explore real-world CCTV feeds processed by Streamux AI models. Optimized for high accuracy and ultra-low inference
+      latency on NVIDIA edge and cloud pipelines.
     </p>
 
     <!-- Filter Buttons -->
@@ -78,11 +97,12 @@
           <span class="video-tag">Industrial Safety & OSHA</span>
           <h4 class="video-title">PPE Compliance & Hazard Detection</h4>
           <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">
-            Real-time inference identifying hard hats, high-visibility reflective vests, and safety boots across multiple concurrent personnel.
+            Real-time inference identifying hard hats, high-visibility reflective vests, and safety boots across
+            multiple concurrent personnel.
           </p>
           <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">YOLO Object Detection</span>
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Sub-50ms Latency</span>
+            <span class="tech-pill">YOLO Object Detection</span>
+            <span class="tech-pill">Sub-50ms Latency</span>
           </div>
         </div>
       </div>
@@ -99,11 +119,12 @@
           <span class="video-tag">Access Control</span>
           <h4 class="video-title">Facial Recognition & Attendance Verification</h4>
           <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">
-            Instant face detection, 512-dimensional vector embedding matching, and automated visitor check-in against company rosters.
+            Instant face detection, 512-dimensional vector embedding matching, and automated visitor check-in against
+            company rosters.
           </p>
           <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">ArcFace Embeddings</span>
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Anti-Spoofing</span>
+            <span class="tech-pill">ArcFace Embeddings</span>
+            <span class="tech-pill">Anti-Spoofing</span>
           </div>
         </div>
       </div>
@@ -112,7 +133,7 @@
       <div class="video-card" data-category="security">
         <div class="video-player-container">
           <video controls preload="metadata" playsinline muted poster="assets/images/thumbnails/thumb_fight.jpg">
-            <source src="assets/Demo_Videos/fight_detection_demo.mp4" type="video/mp4">
+            <source src="assets/Demo_Videos/Fight_new.mp4" type="video/mp4">
             Your browser does not support HTML5 video streaming.
           </video>
         </div>
@@ -120,11 +141,12 @@
           <span class="video-tag">Public Safety</span>
           <h4 class="video-title">Fight & Conflict Detection Engine</h4>
           <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">
-            Deep temporal pose-estimation neural networks detecting aggressive gestures, physical altercations, and crowd unrest in real time.
+            Deep temporal pose-estimation neural networks detecting aggressive gestures, physical altercations, and
+            crowd unrest in real time.
           </p>
           <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Pose Estimation</span>
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Action Recognition</span>
+            <span class="tech-pill">Pose Estimation</span>
+            <span class="tech-pill">Action Recognition</span>
           </div>
         </div>
       </div>
@@ -141,11 +163,12 @@
           <span class="video-tag">Smart Gate Management</span>
           <h4 class="video-title">Automated Gate Management & ANPR</h4>
           <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">
-            High-speed license plate recognition, boom barrier trigger signaling, and vehicle movement classification for high-throughput gates.
+            High-speed license plate recognition, boom barrier trigger signaling, and vehicle movement classification
+            for high-throughput gates.
           </p>
           <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">ANPR OCR</span>
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Boom Barrier Relay</span>
+            <span class="tech-pill">ANPR OCR</span>
+            <span class="tech-pill">Boom Barrier Relay</span>
           </div>
         </div>
       </div>
@@ -162,11 +185,12 @@
           <span class="video-tag">Traffic Intelligence</span>
           <h4 class="video-title">Vehicle Counting & Flow Analytics</h4>
           <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">
-            Bi-directional highway traffic counting, lane speed estimation, and vehicle type breakdown (cars, trucks, buses, two-wheelers).
+            Bi-directional highway traffic counting, lane speed estimation, and vehicle type breakdown (cars, trucks,
+            buses, two-wheelers).
           </p>
           <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">ByteTrack Multi-Object</span>
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Directional Lines</span>
+            <span class="tech-pill">ByteTrack Multi-Object</span>
+            <span class="tech-pill">Directional Lines</span>
           </div>
         </div>
       </div>
@@ -183,11 +207,12 @@
           <span class="video-tag">Facility Intelligence</span>
           <h4 class="video-title">AI Building & Facility Management</h4>
           <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">
-            Holistic building safety monitoring: loitering detection, corridor overcrowding, and automated perimeter tripwire security.
+            Holistic building safety monitoring: loitering detection, corridor overcrowding, and automated perimeter
+            tripwire security.
           </p>
           <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Virtual Tripwires</span>
-            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.15); color: #93C5FD; padding: 2px 8px; border-radius: 4px;">Occupancy Heatmaps</span>
+            <span class="tech-pill">Virtual Tripwires</span>
+            <span class="tech-pill">Occupancy Heatmaps</span>
           </div>
         </div>
       </div>
@@ -196,10 +221,12 @@
 
   <!-- Live Test On Your Feeds CTA -->
   <section class="section" style="padding-top: 20px;">
-    <div style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(249, 115, 22, 0.2) 100%); border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 50px 30px; text-align: center;">
+    <div
+      style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(249, 115, 22, 0.08) 100%); border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 50px 30px; text-align: center; box-shadow: var(--card-shadow);">
       <h2 style="font-size: 2.2rem; margin-bottom: 14px;">Want to Test These Models on Your Own Cameras?</h2>
       <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 650px; margin: 0 auto 28px;">
-        We provide a live proof-of-concept on your RTSP feeds in less than 48 hours. Zero obligation, zero hardware changes.
+        We provide a live proof-of-concept on your RTSP feeds in less than 48 hours. Zero obligation, zero hardware
+        changes.
       </p>
       <a href="contact.html" class="btn btn-primary">
         <i class="fas fa-rocket"></i> Request Your Camera Pilot
@@ -215,7 +242,8 @@
           <img src="assets/logo/Streamux_The_New_Era_Of_Empowerment.png" alt="Streamux AI">
         </a>
         <p>
-          Streamux AI is pioneering real-time computer vision analytics for modern infrastructure, offering end-to-end safety, compliance, and automated video surveillance.
+          Streamux AI is pioneering real-time computer vision analytics for modern infrastructure, offering end-to-end
+          safety, compliance, and automated video surveillance.
         </p>
         <div style="margin-top: 20px;">
           <div class="nvidia-inception-pill">
@@ -254,19 +282,22 @@
           317, NarayanNarayani, Laxmi Nagar, Near Dikshabhoomi, Nagpur 440022
         </p>
         <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 10px;">
-          <i class="fas fa-envelope" style="color: var(--brand-orange); margin-right: 8px;"></i> 
-          <a href="mailto:contact@streamux.ai" style="color: var(--text-main); text-decoration: none;">contact@streamux.ai</a>
+          <i class="fas fa-envelope" style="color: var(--brand-orange); margin-right: 8px;"></i>
+          <a href="mailto:contact@streamux.ai"
+            style="color: var(--text-main); text-decoration: none;">contact@streamux.ai</a>
         </p>
         <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 18px;">
-          <i class="fas fa-phone" style="color: var(--brand-orange); margin-right: 8px;"></i> 
+          <i class="fas fa-phone" style="color: var(--brand-orange); margin-right: 8px;"></i>
           <a href="tel:+919511874029" style="color: var(--text-main); text-decoration: none;">+91 9511874029</a>
         </p>
-        
+
         <div class="social-links-row">
-          <a href="https://www.linkedin.com/company/streamux/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="social-link-btn linkedin" aria-label="Streamux LinkedIn">
+          <a href="https://www.linkedin.com/company/streamux/posts/?feedView=all" target="_blank"
+            rel="noopener noreferrer" class="social-link-btn linkedin" aria-label="Streamux LinkedIn">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://www.instagram.com/streamux.ai/" target="_blank" rel="noopener noreferrer" class="social-link-btn instagram" aria-label="Streamux Instagram">
+          <a href="https://www.instagram.com/streamux.ai/" target="_blank" rel="noopener noreferrer"
+            class="social-link-btn instagram" aria-label="Streamux Instagram">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -282,6 +313,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2.5"></script>
+  <script src="js/main.js?v=2.6"></script>
 </body>
+
 </html>

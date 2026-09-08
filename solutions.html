@@ -6,6 +6,14 @@
   <title>Enterprise AI Solutions & Brochures | Streamux AI</title>
   <meta name="description" content="Explore Streamux AI computer vision solutions: AI Factory, AI Campus, AI Stadium, AI Warehouse, AI Netra, and Smart Gate Management. Download official product brochures.">
   
+  <!-- Preload Theme Script to Prevent Flash -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('streamux-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Preconnect Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +22,7 @@
   <!-- FontAwesome 6 Free -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <link rel="stylesheet" href="css/style.css?v=2.5">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
   <link rel="icon" type="image/jpeg" href="assets/logo/Streamux_Logo.jpg">
 </head>
 <body>
@@ -35,6 +43,9 @@
       </ul>
 
       <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
         <a href="contact.html" class="btn btn-primary">
           <i class="fas fa-bolt"></i> Request Demo
         </a>
@@ -187,7 +198,7 @@
   </section>
 
   <!-- Deployment Models: Edge vs Cloud -->
-  <section class="section" style="background: rgba(11, 17, 32, 0.5);">
+  <section class="section section-alt">
     <div class="section-header">
       <div class="badge badge-orange"><i class="fas fa-server"></i> Flexible Architecture</div>
       <h2 class="section-title">Deployment Options Tailored To You</h2>
@@ -213,7 +224,7 @@
           <li class="feature-item"><i class="fas fa-check-circle" style="color: #76B900;"></i> <strong>Zero Data Egress:</strong> Video feeds never leave your facility.</li>
           <li class="feature-item"><i class="fas fa-check-circle" style="color: #76B900;"></i> <strong>Sub-50ms Latency:</strong> Immediate sirens, gates, or SMS triggers.</li>
           <li class="feature-item"><i class="fas fa-check-circle" style="color: #76B900;"></i> <strong>Internet Independent:</strong> Keeps operating even during internet outages.</li>
-          <li class="feature-item"><i class="fas fa-check-circle" style="color: #76B900;"></i> <strong>Pricing:</strong> Starting at ₹1,000 / stream per month.</li>
+          <li class="feature-item"><i class="fas fa-check-circle" style="color: #76B900;"></i> <strong>Enterprise Customization:</strong> Tailored to on-premise infrastructure requirements.</li>
         </ul>
       </div>
 
@@ -235,7 +246,7 @@
           <li class="feature-item"><i class="fas fa-check-circle"></i> <strong>Zero Hardware Setup:</strong> Connect via your existing router or NVR.</li>
           <li class="feature-item"><i class="fas fa-check-circle"></i> <strong>Multi-Site Aggregation:</strong> Monitor 50+ locations in a single dashboard.</li>
           <li class="feature-item"><i class="fas fa-check-circle"></i> <strong>Automated Updates:</strong> Instant access to newest neural network releases.</li>
-          <li class="feature-item"><i class="fas fa-check-circle"></i> <strong>Pricing:</strong> ₹1,000 / stream billed monthly. No minimum quantity.</li>
+          <li class="feature-item"><i class="fas fa-check-circle"></i> <strong>Scalable Onboarding:</strong> Seamlessly scale from single site pilots to multi-facility deployments.</li>
         </ul>
       </div>
     </div>
@@ -314,7 +325,7 @@
 
   <!-- CTA -->
   <section class="section" style="padding-top: 0;">
-    <div style="text-align: center; background: var(--navy-card); border: 1px solid var(--border-light); padding: 50px 30px; border-radius: var(--radius-lg);">
+    <div style="text-align: center; background: var(--bg-card); border: 1px solid var(--border-light); padding: 50px 30px; border-radius: var(--radius-lg); box-shadow: var(--card-shadow);">
       <h2 style="font-size: 2.2rem; margin-bottom: 14px;">Need a Tailored AI Solution for Your Site?</h2>
       <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px;">
         Our team can train or fine-tune models to your precise facility requirements.
@@ -400,6 +411,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2.5"></script>
+  <script src="js/main.js?v=2.6"></script>
 </body>
 </html>
