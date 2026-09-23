@@ -925,7 +925,7 @@ html_content = f"""<!DOCTYPE html>
         <td style="width: 50%;">
           <span class="link-label">&#9654; PPE & Workplace Safety Demo:</span> <a href="https://streamux.ai/assets/Demo_Videos/PPE_DETECTION_DEMO.mp4" target="_blank">streamux.ai/demo/ppe</a><br>
           <span class="link-label">&#9654; Public Conflict & Violence Demo:</span> <a href="https://streamux.ai/assets/Demo_Videos/Fight_new.mp4" target="_blank">streamux.ai/demo/fight</a><br>
-          <span class="link-label">&#9654; Smart Gate & ANPR Demo:</span> <a href="https://streamux.ai/assets/Demo_Videos/Smart_gate_management.mp4" target="_blank">streamux.ai/demo/gate</a>
+          <span class="link-label">&#9654; Smart Gate & ANPR Demo:</span> <a href="https://streamux.ai/assets/Demo_Videos/cropped_output.mp4" target="_blank">streamux.ai/demo/gate</a>
         </td>
       </tr>
     </table>
