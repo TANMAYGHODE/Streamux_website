@@ -838,24 +838,25 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: var(--nvidia-pill-bg);
-  border: 1px solid var(--nvidia-pill-border);
-  padding: 8px 18px;
-  border-radius: 40px;
+  background: none;
+  border: none;
+  padding: 0;
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: var(--nvidia-pill-shadow);
 }
 
 .nvidia-inception-pill:hover {
-  border-color: #76B900;
-  box-shadow: 0 6px 24px rgba(118, 185, 0, 0.3);
   transform: translateY(-2px);
 }
 
 .nvidia-inception-pill img {
-  height: 24px;
+  height: 48px;
   width: auto;
+}
+
+/* Larger variant for footers and standalone placements */
+.nvidia-inception-pill--lg img {
+  height: 56px;
 }
 
 .nvidia-banner {
@@ -904,6 +905,23 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.08em;
   display: inline-block;
   margin-bottom: 6px;
+}
+
+.nvidia-banner-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.nvidia-banner-logo:hover {
+  transform: translateY(-2px);
+}
+
+.nvidia-banner-logo img {
+  height: 100px;
+  width: auto;
 }
 
 /* Founders & Leadership */
@@ -1200,6 +1218,12 @@ h1, h2, h3, h4, h5, h6 {
   .nvidia-banner {
     flex-direction: column;
     text-align: center;
+  }
+  .nvidia-banner-logo {
+    padding: 20px 32px;
+  }
+  .nvidia-banner-logo img {
+    height: 72px;
   }
 }
 
